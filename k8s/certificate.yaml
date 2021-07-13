@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: hoanle-dev-tls
+spec:
+  secretName: hoanle-dev
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: hoanle.dev
+  dnsNames:
+    - hoanle.dev
+    - www.hoanle.dev
